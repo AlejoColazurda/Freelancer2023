@@ -39,12 +39,9 @@ body{
 }
 
 .navegacion-principal{
-    /*un padding de 10px*/
-    padding: 1rem;
-    /*------------------*/
+
     /*con display flex tenemos nuevas opciones, y usando justify content hacemos que los links de la navegacion queden con un espacio entre cada uno de los links, a diferencia de space around que nos da espacios en mabas direcciones.*/
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     /*---------------------------------------------------------*/
 }
@@ -53,6 +50,16 @@ body{
     /*cambiamos el color de los items en navegacion y le sacamos toda la decoracion que contenian.*/
     color: var(--cblanco);
     text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
     /*---------------------------------------------------------------*/
+    /*un padding de 10px*/
+    padding: 1rem;
+    /*------------------*/
 }
 
+.navegacion-principal a:hover{
+    background-color: var(--cprimario);
+    color: var(--cnegro);
+
+}
