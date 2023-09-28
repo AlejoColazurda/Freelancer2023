@@ -1,0 +1,58 @@
+:root{
+    /*PLAETA DE COLORES (LA LETRA 'C' ES PARA INDICAR QUE SON COLORES)*/
+    --cblanco: #FFFFFF;
+    --cnegro:#212121;
+    --cprimario:#FFC107;
+    --csecundario: #0097A7;
+    --cgris:#757575;
+    /*PLAETA DE COLORES*/
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 16px;/* 1rem = 10px*/
+    font-family: 'Krub', sans-serif;
+}
+.titulo{
+    text-align: center;
+    font-size: 3.8rem;
+    color: var(--cprimario);
+    font-weight: 400;
+    
+}
+
+/*h1*/ span{/*Si colocamos un h1 antes de este span, nos dara para cada span que se encuentre dentro de cada etiqueta h1 los estilos que le definamos.*/
+    font-size: 2rem;
+}
+
+.contenedor{
+    width: 120rem;
+    /*EN MARGIN, EL PRIMER VALOR ES IGUAL A (margin-top), EL SEGUNDO ES IGUAL A (margin-right), EL TERCERO ES IGUAL A (margin-bottom) Y POR ULTIMO (margin-left). usar margin solo nos brinda poder ahorrar lineas de codigo.*/
+    margin: 0 auto; 
+    /*CUANDO TENEMOS VALORES REPETIDOS COMO EN EL CASO DE ARRIBA, CSS INTERPRETA QUE DEBE DE REPETIR ESOS VALORES, Y CON SOLO PONER DOS DE ESOS EL RESTO LO REPLICA.(siemrpe hablando de el codigo de arriba)*/
+}
+
+.nav-bg{
+    background-color: var(--csecundario);
+}
+
+.navegacion-principal{
+    /*un padding de 10px*/
+    padding: 1rem;
+    /*------------------*/
+    /*con display flex tenemos nuevas opciones, y usando justify content hacemos que los links de la navegacion queden con un espacio entre cada uno de los links, a diferencia de space around que nos da espacios en mabas direcciones.*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*---------------------------------------------------------*/
+}
+
+.navegacion-principal a{
+    /*cambiamos el color de los items en navegacion y le sacamos toda la decoracion que contenian.*/
+    color: var(--cblanco);
+    text-decoration: none;
+    /*---------------------------------------------------------------*/
+}
+
