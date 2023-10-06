@@ -28,7 +28,8 @@ body{
 }
 
 .contenedor{
-    width: 120rem;
+    /*Cambios: Pasamos de usar solo width a max-width, ya que queremos que cualquier div tome por default el 100%*/
+    max-width: 120rem;
     /*EN MARGIN, EL PRIMER VALOR ES IGUAL A (margin-top), EL SEGUNDO ES IGUAL A (margin-right), EL TERCERO ES IGUAL A (margin-bottom) Y POR ULTIMO (margin-left). usar margin solo nos brinda poder ahorrar lineas de codigo.*/
     margin: 0 auto; 
     /*CUANDO TENEMOS VALORES REPETIDOS COMO EN EL CASO DE ARRIBA, CSS INTERPRETA QUE DEBE DE REPETIR ESOS VALORES, Y CON SOLO PONER DOS DE ESOS EL RESTO LO REPLICA.(siemrpe hablando de el codigo de arriba)*/
@@ -42,7 +43,8 @@ body{
 
     /*con display flex tenemos nuevas opciones, y usando justify content hacemos que los links de la navegacion queden con un espacio entre cada uno de los links, a diferencia de space around que nos da espacios en mabas direcciones.*/
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    
     /*---------------------------------------------------------*/
 }
 
@@ -64,5 +66,8 @@ body{
 }
 
 @media(min-width:768px){
-    
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
