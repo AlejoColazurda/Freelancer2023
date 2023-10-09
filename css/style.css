@@ -1,13 +1,12 @@
 :root{
-    /*PLAETA DE COLORES (LA LETRA 'C' ES PARA INDICAR QUE SON COLORES)*/
+/*PLAETA DE COLORES (LA LETRA 'C' ES PARA INDICAR QUE SON COLORES)*/
     --cblanco: #FFFFFF;
     --cnegro:#212121;
     --cprimario:#FFC107;
     --csecundario: #0097A7;
     --cgris:#757575;
-    /*PLAETA DE COLORES*/
 }
-
+/*GLOBALES*/
 html{
     font-size: 62.5%;
     box-sizing: border-box;
@@ -21,29 +20,6 @@ body{
     font-size: 16px;/* 1rem = 10px*/
     font-family: 'Krub', sans-serif;
 }
-
-/*DEFINIENDO TAMAÑO DE LA TIPOGRAFIA.*/
-h1{
-    font-size: 3.8rem;
-}
-h2{
-    font-size: 2.8rem;
-}
-h3{
-    font-size: 1.8rem;
-}
-
-h1,h2,h3{
-/*h1*//*Si colocamos un h1 antes de este span, nos dara para cada span que se encuentre dentro de cada etiqueta h1 los estilos que le definamos.*/
-    text-align: center;
-}
-
-.titulo span{
-    font-size: 2rem;
-}
-
-
-
 .contenedor{
     /*Cambios: Pasamos de usar solo width a max-width, ya que queremos que cualquier div tome por default el 100%*/
     max-width: 120rem;
@@ -51,7 +27,6 @@ h1,h2,h3{
     margin: 0 auto; 
     /*CUANDO TENEMOS VALORES REPETIDOS COMO EN EL CASO DE ARRIBA, CSS INTERPRETA QUE DEBE DE REPETIR ESOS VALORES, Y CON SOLO PONER DOS DE ESOS EL RESTO LO REPLICA.(siemrpe hablando de el codigo de arriba)*/
 }
-
 .boton{
     background-color: var(--csecundario);
     color: var(--cblanco);
@@ -71,21 +46,38 @@ h1,h2,h3{
     }
 }
 
+/*TIPOGRAFIA.*/
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+
+h1,h2,h3{
+/*h1*//*Si colocamos un h1 antes de este span, nos dara para cada span que se encuentre dentro de cada etiqueta h1 los estilos que le definamos.*/
+    text-align: center;
+}
+/*TITULOS*/
+.titulo span{
+    font-size: 2rem;
+}
+/*NAVEGACION PRINCIPAL*/
 .nav-bg{
     background-color: var(--csecundario);
 }
-
 .navegacion-principal{
-
-    /*con display flex tenemos nuevas opciones, y usando justify content hacemos que los links de la navegacion queden con un espacio entre cada uno de los links, a diferencia de space around que nos da espacios en mabas direcciones.*/
+/*con display flex tenemos nuevas opciones, y usando justify content hacemos que los links de la navegacion queden con un espacio entre cada uno de los links, a diferencia de space around que nos da espacios en mabas direcciones.*/
     display: flex;
     flex-direction: column;
     
-    /*---------------------------------------------------------*/
+/*---------------------------------------------------------*/
 }
-
 .navegacion-principal a{
-    /*cambiamos el color de los items en navegacion y le sacamos toda la decoracion que contenian.*/
+/*cambiamos el color de los items en navegacion y le sacamos toda la decoracion que contenian.*/
     color: var(--cblanco);
     text-decoration: none;
     font-size: 2rem;
@@ -95,19 +87,17 @@ h1,h2,h3{
     padding: 1rem;
     /*------------------*/
 }
-
 .navegacion-principal a:hover{
     background-color: var(--cprimario);
     color: var(--cnegro);
 }
-
 @media(min-width:768px){
     .navegacion-principal{
         flex-direction: row;
         justify-content: space-between;
     }
 }
-
+/*HERO*/
 .hero{
     background-image: url(../img/hero.jpg) ;
     background-repeat: no-repeat;
@@ -117,14 +107,12 @@ h1,h2,h3{
     position: relative;
     /*---------------------------------------------------------------*/
 }
-
 .contenido-hero{
     position: absolute;
-    /** background-color: rgba(0, 0, 0, .6); Anterior **/
+/** background-color: rgba(0, 0, 0, .6); Anterior **/
     background-color: rgb(0 0 0 / 60%);/*Nuevo formato*/
     width: 100%;
     height: 100%;
-
 /*Este bloque de codigo se puede utilizar para alinear tanto vertical como horizontalmente.*/
     display: flex;
     flex-direction: column;
@@ -136,7 +124,7 @@ h1,h2,h3{
 .contenido-hero p{
     color: var(--cblanco);
 }
-.ubicacion{
+.contenido-hero .ubicacion{
     display: flex;
     align-items: flex-end;
 }
