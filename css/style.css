@@ -12,7 +12,17 @@
 html{
     font-size: 62.5%;
     box-sizing: border-box;
+    scroll-snap-type: y mandatory;
 }
+
+/*SCROLL-SNAP*/
+.servicios,
+.navegacion-principal,
+.formulario{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
 *, *::before, *::after{
     box-sizing: border-box;
 }
@@ -217,7 +227,6 @@ h1,h2,h3{
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto auto 20rem;
         column-gap: 1rem;
-
     }
     .campo:nth-child(3),
     .campo:nth-child(4){/*Cuando tenemos varios class con el mismo nombre podemos usar la funcion nth, y los enumerará de 1 hasta n.*/
@@ -241,4 +250,9 @@ h1,h2,h3{
     border-color: none;
     padding: 1.5rem;
     border-radius: .5rem;
+}
+
+/*FOOTER*/
+.footer{
+    text-align: center;
 }
